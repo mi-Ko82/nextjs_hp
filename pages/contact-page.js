@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
-import { DlistItem } from "../components/atoms/listItem/DlistItem";
-import { UserIcon } from "../components/atoms/userIcon/UserIcon";
+import { DlistItem } from "../components/Atoms/listItem/DlistItem";
+import { UserIcon } from "../components/Atoms/userIcon/UserIcon";
 import { SnsLinks } from "../components/Molecules/SnsLinks";
 
 const Contact = () => {
