@@ -8,7 +8,7 @@ const Post = ({ post }) => {
   }
   return (
     <Layout title={post.title}>
-      <div className="w-9/12 m-auto">
+      <div className="w-7/12 m-auto flex flex-col justify-center">
         <header className="mt-4">
           <p className="text-center">ID: {post.id}</p>
           <h1 className="mb-8 text-xl font-bold text-center">{post.title}</h1>
