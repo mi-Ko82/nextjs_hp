@@ -1,6 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 
-export const SnsLinks = (props) => {
+type Props = {
+  twLink: string;
+  fbLink: string;
+  ghLink: string;
+};
+
+export const SnsLinks: FC<Props> = (props) => {
   const { twLink, fbLink, ghLink } = props;
   return (
     <ul className="mt-6 flex justify-around">
@@ -18,7 +24,7 @@ export const SnsLinks = (props) => {
         </a>
       </li>
       <li>
-        <a href={twLink} target="_blank" rel="noopener noreferrer">
+        <a href={fbLink} target="_blank" rel="noopener noreferrer">
           <svg
             className="w-6 h-6 mr-3 text-blue-700"
             fill="currentColor"

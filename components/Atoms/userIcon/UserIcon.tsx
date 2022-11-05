@@ -1,6 +1,14 @@
 import Image from "next/image";
+import { NextPage } from "next";
 
-export const UserIcon = (props) => {
+type Props = {
+  iconPath: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
+export const UserIcon: NextPage<Props> = (props) => {
   const { iconPath, width, height, alt = "" } = props;
   return (
     <figure>

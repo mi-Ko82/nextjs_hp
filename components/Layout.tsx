@@ -1,8 +1,16 @@
+import { ReactNode } from "react";
+import { NextPage } from "next";
 import Head from "next/head";
 import Footer from "./Organisms/Footer";
 import Header from "./Organisms/Header";
 
-export default function Layout({ children, title = "HP by Nextjs" }) {
+type Props = {
+  children: ReactNode;
+  title: string;
+};
+
+const Layout: NextPage<Props> = (props) => {
+  const { children, title = "HP by Nextjs" } = props;
   return (
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-500 text-sm font-monos">
       <Head>
@@ -15,4 +23,6 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
       <Footer />
     </div>
   );
-}
+};
+
+export default Layout;

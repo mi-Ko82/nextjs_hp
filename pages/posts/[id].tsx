@@ -1,8 +1,9 @@
 import BackButton from "../../components/Atoms/Buttons/BackButton";
 import Layout from "../../components/Layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import { Post } from "../../types/api/Posts";
 
-const Post = ({ post }) => {
+const Post = ({ post }: { post: Post }) => {
   if (!post) {
     return <div>No article available</div>;
   }
@@ -32,8 +33,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
-  const post = await getPostData(params.id);
+export async function getStaticProps({ params }: { params: { id: string } }) {
+  const post: Post = await getPostData(params.id);
   return {
     props: {
       post,

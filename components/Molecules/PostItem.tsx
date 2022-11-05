@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { NextPage } from "next";
+import { Posts } from "../../types/api/Posts";
 
-const Post = (props) => {
+const PostItem: NextPage<Posts> = (props) => {
   const { post } = props;
+
   return (
     <li className="mt-2 flex items-center">
       <span>{post.id}</span>:
@@ -14,4 +17,4 @@ const Post = (props) => {
   );
 };
 
-export default Post;
+export default PostItem;

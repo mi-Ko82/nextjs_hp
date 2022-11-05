@@ -2,8 +2,9 @@ import Layout from "../components/Layout";
 import { DlistItem } from "../components/Atoms/listItem/DlistItem";
 import { UserIcon } from "../components/Atoms/userIcon/UserIcon";
 import { SnsLinks } from "../components/Molecules/SnsLinks";
+import { NextPage } from "next";
 
-const Contact = () => {
+const Contact: NextPage = () => {
   return (
     <Layout title="Contact">
       <div className="bg-white text-center shadow-xl p-8 w-80 rounded">
@@ -13,8 +14,8 @@ const Contact = () => {
         <div className="flex justify-center mt-4">
           <UserIcon
             iconPath="/user-icon.png"
-            width="60"
-            height="60"
+            width={60}
+            height={60}
             alt="apple"
           />
         </div>

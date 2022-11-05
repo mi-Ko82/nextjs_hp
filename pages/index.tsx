@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
+import { NextPage } from "next";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <div className="py-0 px-2">
       <Layout title="home">
@@ -8,4 +9,6 @@ export default function Home() {
       </Layout>
     </div>
   );
-}
+};
+
+export default Home;

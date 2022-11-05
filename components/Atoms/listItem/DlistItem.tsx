@@ -1,4 +1,11 @@
-export const DlistItem = (props) => {
+import { NextPage } from "next";
+
+type Props = {
+  title: string;
+  text: string;
+};
+
+export const DlistItem: NextPage<Props> = (props) => {
   const { title, text } = props;
   return (
     <div className="mt-3">

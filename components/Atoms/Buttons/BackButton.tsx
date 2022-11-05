@@ -1,6 +1,12 @@
 import Link from "next/link";
+import { NextPage } from "next";
 
-const BackButton = (props) => {
+type Props = {
+  url: string;
+  text: string;
+};
+
+const BackButton: NextPage<Props> = (props) => {
   const { url, text = "Back" } = props;
   return (
     <Link href={url}>

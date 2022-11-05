@@ -1,12 +1,16 @@
+import { Post } from "../types/api/Posts";
+
 const apiUrl = "https://jsonplaceholder.typicode.com/posts";
 
 export const getAllPostsData = async () => {
   const res = await fetch(new URL(apiUrl));
-  const posts = await res.json();
+  const posts: Post[] = await res.json();
   return posts;
 };
 
-export const getAllPostIds = async () => {
+export const getAllPostIds: () => Promise<{
+  params: { id: string };
+}> = async () => {
   const res = await fetch(new URL(apiUrl));
   const posts = await res.json();
 
@@ -19,7 +23,7 @@ export const getAllPostIds = async () => {
   });
 };
 
-export const getPostData = async (id) => {
+export const getPostData: (id: string) => Promise<Post> = async (id) => {
   const res = await fetch(new URL(`${apiUrl}/${id}/`));
   const post = res.json();
   return post;
